@@ -1,11 +1,21 @@
 {
 	"name": "json-prettifier",
 	"version": "1.0.0",
-	"description": "",
+	"description": "A simple formatting tool to make your JSON look pretty.",
 	"main": "./src/index.ts",
 	"scripts": {
 		"ts-compile": "tsc"
 	},
 	"author": "Aakash Jha <thedevdesigner@gmail.com> (https://www.thedevdesigner.com/)",
-	"license": "ISC"
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Aakash1103Jha/json-prettifier.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Aakash1103Jha/json-prettifier.git/issues"
+	},
+	"engines": {
+		"node": "17.x"
+	}
 }
