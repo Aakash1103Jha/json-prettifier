@@ -1,0 +1,11 @@
+{
+	"name": "json-prettifier",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./src/index.ts",
+	"scripts": {
+		"ts-compile": "tsc"
+	},
+	"author": "Aakash Jha <thedevdesigner@gmail.com> (https://www.thedevdesigner.com/)",
+	"license": "ISC"
+}
