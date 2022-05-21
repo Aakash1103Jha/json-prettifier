@@ -1,0 +1,34 @@
+.prettify,
+.actions {
+	display: flex;
+	align-items: center;
+}
+.prettify {
+	max-width: 1023px;
+	width: 100%;
+	padding: 2rem 0rem;
+	background: var(--bg);
+}
+.textarea {
+	border: none;
+	flex: 1;
+	outline: none;
+	padding: 1rem;
+	background: #f4f4f4;
+}
+.textarea:focus,
+.textarea:active {
+	box-shadow: var(--orange) -2px -2px inset, var(--orange) 2px 2px inset;
+}
+.raw,
+.formatted {
+	/* margin: 1rem; */
+	border-radius: var(--radius-sm);
+	height: 30rem;
+	max-height: 30rem;
+}
+.actions {
+	padding: 1rem;
+	flex-direction: column;
+	justify-content: center;
+}

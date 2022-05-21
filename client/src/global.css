@@ -48,6 +48,7 @@ button {
 	min-height: 100vh;
 	width: 100%;
 	background: var(--bg);
+	/* background-color: #f4f4f4; */
 }
 [theme="dark"] {
 	--text: var(--white);
