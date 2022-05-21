@@ -3,13 +3,13 @@
 		"id": 1,
 		"label": "Home",
 		"path": "/",
-		"isPublicRoute": true
+		"isPublicRoute": false
 	},
 	{
 		"id": 2,
 		"label": "Profile",
 		"path": "/profile",
-		"isPublicRoute": true
+		"isPublicRoute": false
 	},
 	{
 		"id": 3,
