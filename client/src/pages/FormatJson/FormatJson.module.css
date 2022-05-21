@@ -1,12 +1,12 @@
-.prettify,
+.formatjson,
 .actions {
 	display: flex;
 	align-items: center;
 }
-.prettify {
+.formatjson {
 	max-width: 1023px;
 	width: 100%;
-	padding: 2rem 0rem;
+	padding: 2rem;
 	background: var(--bg);
 }
 .textarea {
@@ -14,7 +14,8 @@
 	flex: 1;
 	outline: none;
 	padding: 1rem;
-	background: #f4f4f4;
+	background: var(--gray-light);
+	color: var(--white);
 }
 .textarea:focus,
 .textarea:active {

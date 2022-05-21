@@ -1,7 +1,7 @@
 import { type FC } from "react"
 import { Route, Routes } from "react-router"
 import Navbar from "./components/Navbar/Navbar"
-import Prettify from "./pages/Prettify/Prettify"
+import FormatJson from "./pages/FormatJson/FormatJson"
 
 const App: FC = () => {
 	return (
@@ -9,7 +9,7 @@ const App: FC = () => {
 			<Navbar />
 			<Routes>
 				{/* <Route path="/" element={<p>Homepage</p>} /> */}
-				<Route path="/" element={<Prettify />} />
+				<Route path="/" element={<FormatJson />} />
 			</Routes>
 		</div>
 	)

@@ -1,14 +1,20 @@
 import { type FC } from "react"
+import { GlobalProps } from "../../utils/GlobalProps"
+
 import styles from "./Button.module.css"
 
-interface ButtonProps {
+interface ButtonProps extends GlobalProps {
 	label: string
-
-	onclick: () => void | {}
+	btnStyle?: "primary" | "secondary"
 }
 
 const Button: FC<ButtonProps> = (props) => {
-	return <button className={`${styles.button}`}>{props.label}</button>
+	const { btnStyle = "primary", label } = props
+	return (
+		<button className={`${styles.button} ${styles[btnStyle]}`} onClick={props.handlerFunc}>
+			{label}
+		</button>
+	)
 }
 
 export default Button

@@ -1,10 +1,10 @@
 import { ChangeEvent, useState, type FC } from "react"
 import Button from "../../components/Button/Button"
 
-import styles from "./Prettify.module.css"
+import styles from "./FormatJson.module.css"
 import { minifyJson, prettifyJson } from "../../utils/functionalities"
 
-const Prettify: FC = () => {
+const FormatJson: FC = () => {
 	const [rawData, setRawData] = useState("")
 	const [prettyData, setPrettyData] = useState("")
 
@@ -19,20 +19,31 @@ const Prettify: FC = () => {
 		setPrettyData(e.target.value)
 	}
 	const onClickPrettifyData = () => {
+		const finalData = prettifyJson(rawData)
+		setPrettyData(finalData)
+	}
+	const onClickMinifyData = () => {
 		const finalData = minifyJson(rawData)
 		setPrettyData(finalData)
 	}
 
 	return (
-		<div className={`${styles.prettify}`}>
+		<div className={`${styles.formatjson}`}>
 			<textarea
 				id="raw"
 				value={rawData}
 				onChange={onRawDataChange}
+				placeholder="Ugly JSON 🤢 goes in here..."
 				className={`${styles.textarea} ${styles.raw}`}></textarea>
 			<div className={`${styles.actions}`}>
-				<button onClick={onClickPrettifyData}>Prettify</button>
-				<button onClick={clearData}>Reset</button>
+				<Button label="Prettify" handlerFunc={onClickPrettifyData} />
+				<Button label="Minify" handlerFunc={onClickMinifyData} />
+				<Button
+					label="❌"
+					btnStyle="secondary"
+					handlerFunc={clearData}
+					classname="danger"
+				/>
 			</div>
 			<textarea
 				readOnly
@@ -40,9 +51,10 @@ const Prettify: FC = () => {
 				id="formatted"
 				onChange={onPrettyDataChange}
 				value={prettyData}
+				placeholder="Pretty JSON 🚀 comes out here..."
 				className={`${styles.textarea} ${styles.formatted}`}></textarea>
 		</div>
 	)
 }
 
-export default Prettify
+export default FormatJson
