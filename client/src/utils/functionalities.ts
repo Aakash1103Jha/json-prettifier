@@ -8,8 +8,12 @@
  */
 export const prettifyJson = (data: string = "", tabValue = 4): string => {
 	if (!data || !data.length) return "Provide JSON to be formatted"
-	const prettyJson = JSON.stringify(JSON.parse(data), null, tabValue)
-	return prettyJson
+	try {
+		const prettyJson = JSON.stringify(JSON.parse(data), null, tabValue)
+		return prettyJson
+	} catch (err) {
+		return (err as Error).message
+	}
 }
 
 /**
@@ -21,6 +25,10 @@ export const prettifyJson = (data: string = "", tabValue = 4): string => {
  */
 export const minifyJson = (data: string = "") => {
 	if (!data || !data.length) return "Provide JSON to be formatted"
-	const miniJson = JSON.stringify(JSON.parse(data))
-	return miniJson
+	try {
+		const miniJson = JSON.stringify(JSON.parse(data))
+		return miniJson
+	} catch (err) {
+		return (err as Error).message
+	}
 }
