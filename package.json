@@ -5,8 +5,13 @@
 	"main": "./src/index.ts",
 	"scripts": {
 		"ts-compile": "tsc",
-		"dev": "ts-node-dev ./server/index.ts",
-		"build": "webpack -c ./webpack.config.ts"
+		"dev": "MODE=dev ts-node-dev ./server/index.ts",
+		"pre-build": "rm -rf ./dist",
+		"post-build": "mv ./client/build/ ./dist/",
+		"build-server": "webpack -c webpack.config.ts",
+		"build-client": "cd ./client && npm i && npm run build",
+		"build": "npm run build-client && npm run pre-build && npm run build-server && npm run post-build",
+		"start": "MODE=prod node app/dist/main-*.js"
 	},
 	"author": "Aakash Jha <thedevdesigner@gmail.com> (https://www.thedevdesigner.com/)",
 	"license": "ISC",
