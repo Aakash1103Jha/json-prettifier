@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"label": "Home",
+		"path": "/",
+		"isPublicRoute": true
+	},
+	{
+		"id": 2,
+		"label": "Profile",
+		"path": "/profile",
+		"isPublicRoute": true
+	},
+	{
+		"id": 3,
+		"label": "Settings",
+		"path": "/settings",
+		"isPublicRoute": false
+	}
+]

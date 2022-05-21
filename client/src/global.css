@@ -5,12 +5,16 @@
 	--green-dark: #2e6535;
 	--green-medium: #347d39;
 	--green-light: #52a057;
-	--text: #cdd9e5;
+	--blue-light: #cdd9e5;
+	--white: #fff;
 	--orange: #ec775c;
 	--transition: 0.2s;
 	--radius-sm: 0.2rem;
 	--radius-md: 0.4rem;
 	--text-shadow: -1px -1px 0 var(--text), 1px -1px 0 var(--gray-dark);
+
+	--text: var(--gray-dark);
+	--bg: var(--white);
 }
 * {
 	padding: 0;
@@ -37,7 +41,15 @@ p,
 button {
 	font-size: calc(0.8rem + 0.1vmin);
 }
-[theme="default"] {
+.App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	width: 100%;
+	background: var(--bg);
 }
 [theme="dark"] {
+	--text: var(--white);
+	--bg: var(--gray-light);
 }

@@ -1,0 +1,42 @@
+.navbar,
+.navbar_wrapper,
+.links,
+.link,
+.logo,
+.a {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.navbar {
+	height: 5rem;
+	justify-content: center;
+	padding: 0rem 2rem;
+	background: var(--bg);
+	color: var(--text);
+	width: 100%;
+}
+.navbar_wrapper {
+	max-width: 1023px;
+	width: 100%;
+	justify-content: space-between;
+	background: transparent;
+}
+.logo {
+	flex: 1;
+}
+.links {
+	flex: 3;
+	justify-content: flex-end;
+}
+.link {
+	margin-left: 1rem;
+}
+.a {
+	padding: 1rem;
+}
+.a:active,
+.a:hover,
+a.active {
+	box-shadow: inset var(--orange) 0px -3px 0px 0px;
+}
