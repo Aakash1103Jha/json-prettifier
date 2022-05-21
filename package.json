@@ -11,7 +11,7 @@
 		"build-server": "webpack -c webpack.config.ts",
 		"build-client": "cd ./client && npm i && npm run build",
 		"build": "npm run build-client && npm run pre-build && npm run build-server && npm run post-build",
-		"start": "MODE=prod node /dist/main-*.js"
+		"start": "MODE=prod node /app/dist/main-*.js"
 	},
 	"author": "Aakash Jha <thedevdesigner@gmail.com> (https://www.thedevdesigner.com/)",
 	"license": "ISC",
