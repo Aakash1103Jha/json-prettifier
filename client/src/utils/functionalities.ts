@@ -6,7 +6,7 @@
  * @param { number } tabValue - Amount of spacing to be followed while formatting. If no value is provided, it defaults to 4
  * @returns {string} prettyJson - Minified JSON / error text is empty data string is provided
  */
-const prettifyJson = (data: string = "", tabValue = 4): string => {
+export const prettifyJson = (data: string = "", tabValue = 4): string => {
 	if (!data || !data.length) return "Provide JSON to be formatted"
 	const prettyJson = JSON.stringify(JSON.parse(data), null, tabValue)
 	return prettyJson
@@ -19,11 +19,8 @@ const prettifyJson = (data: string = "", tabValue = 4): string => {
  * @param { string } data - JSON string to be formatted
  * @returns {string} prettyJson - Minified JSON / error text is empty data string is provided
  */
-const minifyJson = (data: string = "") => {
+export const minifyJson = (data: string = "") => {
 	if (!data || !data.length) return "Provide JSON to be formatted"
 	const miniJson = JSON.stringify(JSON.parse(data))
 	return miniJson
 }
-
-console.log(prettifyJson())
-console.log(minifyJson())
