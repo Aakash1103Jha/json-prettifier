@@ -1,7 +1,7 @@
 import nodeExternals from "webpack-node-externals"
 import path from "path"
 
-const VENDORS = ["dotenv", "express", "regenerator-runtime"]
+const VENDORS = ["dotenv", "express", "regenerator-runtime", "multer"]
 module.exports = {
 	mode: "production",
 	entry: {

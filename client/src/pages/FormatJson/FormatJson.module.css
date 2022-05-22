@@ -1,5 +1,6 @@
 .formatjson,
-.actions {
+.actions,
+.uploader {
 	display: flex;
 	align-items: center;
 }
@@ -32,4 +33,13 @@
 	padding: 1rem;
 	flex-direction: column;
 	justify-content: center;
+}
+.uploader {
+	width: 100%;
+	max-width: 1023px;
+	justify-content: center;
+}
+input[type="file"] {
+	color: var(--white);
+	padding: 1rem;
 }

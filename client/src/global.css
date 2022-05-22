@@ -35,7 +35,8 @@ li,
 a,
 p,
 button,
-textarea {
+textarea,
+input[type="file"] {
 	font-size: calc(0.8rem + 0.1vmin);
 }
 textarea {
