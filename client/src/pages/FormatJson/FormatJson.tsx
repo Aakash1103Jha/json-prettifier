@@ -33,7 +33,7 @@ const FormatJson: FC = () => {
 		const fd = new FormData()
 		fd.append("json_file", jsonFileData)
 
-		const res = await fetch("http://localhost:4000/api/file/upload", {
+		const res = await fetch("/api/file/upload", {
 			method: "POST",
 			body: fd,
 		})
