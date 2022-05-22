@@ -27,6 +27,7 @@
 	/* margin: 1rem; */
 	border-radius: var(--radius-sm);
 	height: 30rem;
+	min-height: 30rem;
 	max-height: 30rem;
 }
 .actions {
