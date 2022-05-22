@@ -3,3 +3,8 @@
 # JSON Prettifier
 
 A simple tool to format and make your JSON data look pretty.
+
+## MVP Features: 
+
+- Add JSON inline using the provided textarea, or upload a JSON file to format its contents.
+- Prettify or Minify JSON
